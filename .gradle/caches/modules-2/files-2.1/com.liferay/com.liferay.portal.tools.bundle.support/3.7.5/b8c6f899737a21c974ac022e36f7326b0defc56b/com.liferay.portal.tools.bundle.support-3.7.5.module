@@ -1,0 +1,60 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.liferay",
+    "module": "com.liferay.portal.tools.bundle.support",
+    "version": "3.7.5",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.3.3"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "com.liferay.portal.tools.bundle.support-3.7.5.jar",
+          "url": "com.liferay.portal.tools.bundle.support-3.7.5.jar",
+          "size": 2778112,
+          "sha512": "a228a2d0c555578c06da2308b4015ba1d4ec44d1a97ce56914d9bfc2a0301df784982183230d6617afa256bec5bfcae2a2dde558fc17868bff36d48bdfa36cad",
+          "sha256": "3f0ce7c4b8afcfd500e86d36a862c09b5291193dffaf225754eca24564229c64",
+          "sha1": "b0c8b217767873f17023ecbf2ec3ad53041b549c",
+          "md5": "c541b9f8a3f05555e099933f09549bfb"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "com.liferay.portal.tools.bundle.support-3.7.5.jar",
+          "url": "com.liferay.portal.tools.bundle.support-3.7.5.jar",
+          "size": 2778112,
+          "sha512": "a228a2d0c555578c06da2308b4015ba1d4ec44d1a97ce56914d9bfc2a0301df784982183230d6617afa256bec5bfcae2a2dde558fc17868bff36d48bdfa36cad",
+          "sha256": "3f0ce7c4b8afcfd500e86d36a862c09b5291193dffaf225754eca24564229c64",
+          "sha1": "b0c8b217767873f17023ecbf2ec3ad53041b549c",
+          "md5": "c541b9f8a3f05555e099933f09549bfb"
+        }
+      ]
+    }
+  ]
+}

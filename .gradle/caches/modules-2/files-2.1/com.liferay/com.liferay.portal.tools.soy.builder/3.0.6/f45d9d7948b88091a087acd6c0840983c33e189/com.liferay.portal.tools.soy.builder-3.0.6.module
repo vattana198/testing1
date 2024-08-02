@@ -1,0 +1,130 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.liferay",
+    "module": "com.liferay.portal.tools.soy.builder",
+    "version": "3.0.6",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.3.3"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.google.template",
+          "module": "soy",
+          "version": {
+            "requires": "2019-03-07"
+          }
+        },
+        {
+          "group": "org.codehaus.plexus",
+          "module": "plexus-utils",
+          "version": {
+            "requires": "3.0.24"
+          },
+          "excludes": [
+            {
+              "group": "*",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "org.sonatype.plexus",
+          "module": "plexus-build-api",
+          "version": {
+            "requires": "0.0.7"
+          },
+          "excludes": [
+            {
+              "group": "*",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "com.liferay.portal.tools.soy.builder-3.0.6.jar",
+          "url": "com.liferay.portal.tools.soy.builder-3.0.6.jar",
+          "size": 116451,
+          "sha512": "6ce635cb4551f141e7b44a4fab299df617ed4264115280e9be9faa35c3c0c99243d361f2f501994eecf709a6911f79dd59d6ca33ff1c4db0e7b9ce557c39912e",
+          "sha256": "d893e849f6f845eab1810a48dd45785979c9454eb9965c837cc38c4e14f8fb32",
+          "sha1": "473329f440387d71bd9b992a0be5ec5811982b9a",
+          "md5": "e0f19c8892b1982975c9539702fca372"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.google.template",
+          "module": "soy",
+          "version": {
+            "requires": "2019-03-07"
+          }
+        },
+        {
+          "group": "org.codehaus.plexus",
+          "module": "plexus-utils",
+          "version": {
+            "requires": "3.0.24"
+          },
+          "excludes": [
+            {
+              "group": "*",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "org.sonatype.plexus",
+          "module": "plexus-build-api",
+          "version": {
+            "requires": "0.0.7"
+          },
+          "excludes": [
+            {
+              "group": "*",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "com.liferay.portal.tools.soy.builder-3.0.6.jar",
+          "url": "com.liferay.portal.tools.soy.builder-3.0.6.jar",
+          "size": 116451,
+          "sha512": "6ce635cb4551f141e7b44a4fab299df617ed4264115280e9be9faa35c3c0c99243d361f2f501994eecf709a6911f79dd59d6ca33ff1c4db0e7b9ce557c39912e",
+          "sha256": "d893e849f6f845eab1810a48dd45785979c9454eb9965c837cc38c4e14f8fb32",
+          "sha1": "473329f440387d71bd9b992a0be5ec5811982b9a",
+          "md5": "e0f19c8892b1982975c9539702fca372"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+2024-08-02 02:12:04.706 INFO  [main][PortalContextLoaderListener:114] JVM arguments: --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.http=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=jdk.zipfs/jdk.nio.zipfs=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Djava.util.logging.config.file=/Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dfile.encoding=UTF-8 -Djava.locale.providers=JRE,COMPAT,CLDR -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT -Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7 -Dignore.endorsed.dirs= -Dcatalina.base=/Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat -Dcatalina.home=/Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat -Djava.io.tmpdir=/Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp
+2024-08-02 02:12:10.231 WARN  [SystemExecutorServiceUtil-1][DialectDetector:73] Liferay is configured to use Hypersonic as its database. Do NOT use Hypersonic in production. Hypersonic is an embedded database useful for development and demonstration purposes. The database settings can be changed in portal-ext.properties.
+2024-08-02 02:12:10.233 INFO  [SystemExecutorServiceUtil-1][DialectDetector:144] Using dialect com.liferay.portal.dao.orm.hibernate.HSQLDialect for HSQL Database Engine 2.7
+2024-08-02 02:12:10.316 INFO  [main][ModuleFrameworkImpl:1352] Starting initial bundles
+2024-08-02 02:12:11.087 INFO  [SystemExecutorServiceUtil-6][InterpolationConfigurationPlugin:109] Configured directory for secrets: /Users/macbookpro/Desktop/sample-liferay-workspace/bundles/osgi/configs
+2024-08-02 02:12:11.512 INFO  [main][ModuleFrameworkImpl:1642] Started initial bundles
+2024-08-02 02:12:11.512 INFO  [main][ModuleFrameworkImpl:1687] Starting dynamic bundles
+2024-08-02 02:12:13.293 WARN  [Start Level: Equinox Container: a2f66697-2f36-4268-8fe7-8acfd197ad11][SidecarManager:72] Liferay automatically starts a child process of Elasticsearch named sidecar for convenient development and demonstration purposes. Do NOT use sidecar in production. Refer to the documentation for details on the limitations of sidecar and instructions on configuring a remote Elasticsearch connection in the Control Panel.
+2024-08-02 02:12:25.491 INFO  [main][ModuleFrameworkImpl:1710] Started dynamic bundles
+2024-08-02 02:12:25.497 INFO  [main][ModuleFrameworkImpl:1717] Starting web bundles
+2024-08-02 02:12:27.137 ERROR [SystemExecutorServiceUtil-8][ElasticsearchConnectionManager:80] Elasticsearch sidecar could not be started. Search will be unavailable. Manual installation of Elasticsearch and activation of remote mode is recommended.
+java.lang.RuntimeException: com.liferay.petra.process.ProcessException: Unable to start elasticsearch server
+	at com.liferay.portal.search.elasticsearch7.internal.sidecar.Sidecar._startElasticsearch(Sidecar.java:572) ~[?:?]
+	at com.liferay.portal.search.elasticsearch7.internal.sidecar.Sidecar.start(Sidecar.java:100) ~[?:?]
+	at com.liferay.portal.search.elasticsearch7.internal.sidecar.SidecarManager.lambda$applyConfigurations$0(SidecarManager.java:106) ~[?:?]
+	at com.liferay.portal.search.elasticsearch7.internal.connection.ElasticsearchConnection.connect(ElasticsearchConnection.java:52) ~[?:?]
+	at com.liferay.portal.search.elasticsearch7.internal.connection.ElasticsearchConnectionManager.lambda$addElasticsearchConnection$0(ElasticsearchConnectionManager.java:74) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: com.liferay.petra.process.ProcessException: Unable to start elasticsearch server
+	at com.liferay.portal.search.elasticsearch7.internal.sidecar.ElasticsearchServerUtil.start(ElasticsearchServerUtil.java:56) ~[?:?]
+	at com.liferay.portal.search.elasticsearch7.internal.sidecar.StartSidecarProcessCallable.call(StartSidecarProcessCallable.java:28) ~[?:?]
+	at com.liferay.portal.search.elasticsearch7.internal.sidecar.StartSidecarProcessCallable.call(StartSidecarProcessCallable.java:20) ~[?:?]
+	at com.liferay.petra.process.local.RequestProcessCallable.call(RequestProcessCallable.java:31) ~[com.liferay.petra.process.jar:?]
+	... 4 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:118) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at com.liferay.portal.search.elasticsearch7.internal.sidecar.ElasticsearchServerUtil.start(ElasticsearchServerUtil.java:47) ~[?:?]
+	at com.liferay.portal.search.elasticsearch7.internal.sidecar.StartSidecarProcessCallable.call(StartSidecarProcessCallable.java:28) ~[?:?]
+	at com.liferay.portal.search.elasticsearch7.internal.sidecar.StartSidecarProcessCallable.call(StartSidecarProcessCallable.java:20) ~[?:?]
+	at com.liferay.petra.process.local.RequestProcessCallable.call(RequestProcessCallable.java:31) ~[com.liferay.petra.process.jar:?]
+	... 4 more
+Caused by: org.elasticsearch.bootstrap.StartupException: BindHttpException[Failed to bind to [::1]:9201]; nested: BindException[Address already in use];
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:173) ~[?:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:160) ~[?:?]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:77) ~[?:?]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:112) ~[?:?]
+	at org.elasticsearch.cli.Command.main(Command.java:77) ~[?:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:125) ~[?:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:80) ~[?:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at com.liferay.portal.search.elasticsearch7.internal.sidecar.ElasticsearchServerUtil.start(ElasticsearchServerUtil.java:47) ~[?:?]
+	at com.liferay.portal.search.elasticsearch7.internal.sidecar.StartSidecarProcessCallable.call(StartSidecarProcessCallable.java:28) ~[?:?]
+	at com.liferay.portal.search.elasticsearch7.internal.sidecar.StartSidecarProcessCallable.call(StartSidecarProcessCallable.java:20) ~[?:?]
+	at com.liferay.petra.process.local.RequestProcessCallable.call(RequestProcessCallable.java:31) ~[com.liferay.petra.process.jar:?]
+	... 4 more
+Caused by: org.elasticsearch.http.BindHttpException: Failed to bind to [::1]:9201
+	at org.elasticsearch.http.AbstractHttpServerTransport.bindAddress(AbstractHttpServerTransport.java:197) ~[?:?]
+	at org.elasticsearch.http.AbstractHttpServerTransport.bindServer(AbstractHttpServerTransport.java:164) ~[?:?]
+	at org.elasticsearch.http.netty4.Netty4HttpServerTransport.doStart(Netty4HttpServerTransport.java:263) ~[?:?]
+	at org.elasticsearch.common.component.AbstractLifecycleComponent.start(AbstractLifecycleComponent.java:48) ~[?:?]
+	at org.elasticsearch.node.Node.start(Node.java:1266) ~[?:?]
+	at org.elasticsearch.bootstrap.Bootstrap.start(Bootstrap.java:335) ~[?:?]
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:443) ~[?:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:169) ~[?:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:160) ~[?:?]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:77) ~[?:?]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:112) ~[?:?]
+	at org.elasticsearch.cli.Command.main(Command.java:77) ~[?:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:125) ~[?:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:80) ~[?:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at com.liferay.portal.search.elasticsearch7.internal.sidecar.ElasticsearchServerUtil.start(ElasticsearchServerUtil.java:47) ~[?:?]
+	at com.liferay.portal.search.elasticsearch7.internal.sidecar.StartSidecarProcessCallable.call(StartSidecarProcessCallable.java:28) ~[?:?]
+	at com.liferay.portal.search.elasticsearch7.internal.sidecar.StartSidecarProcessCallable.call(StartSidecarProcessCallable.java:20) ~[?:?]
+	at com.liferay.petra.process.local.RequestProcessCallable.call(RequestProcessCallable.java:31) ~[com.liferay.petra.process.jar:?]
+	... 4 more
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) ~[?:?]
+	at sun.nio.ch.Net.bind(Net.java:565) ~[?:?]
+	at sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:344) ~[?:?]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:301) ~[?:?]
+	at io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:141) ~[?:?]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:562) ~[?:?]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1334) ~[?:?]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:600) ~[?:?]
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:579) ~[?:?]
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:973) ~[?:?]
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:260) ~[?:?]
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:356) ~[?:?]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174) ~[?:?]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167) ~[?:?]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470) ~[?:?]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[?:?]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[?:?]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[?:?]
+	... 1 more
+2024-08-02 02:12:27.727 INFO  [com.liferay.portal.search.elasticsearch7.internal.sidecar.SidecarMainProcessCallable@60cb8827[-Xms1g -Xmx1g -XX:+AlwaysPreTouch -Des.path.conf=/Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/sidecar9230242832198906672/config -Des.networkaddress.cache.ttl=60 -Des.networkaddress.cache.negative.ttl=10 -Dlog4j.shutdownHookEnabled=false -Dlog4j2.disable.jmx=true -Dio.netty.allocator.type=unpooled -Dio.netty.allocator.numDirectArenas=0 -Dio.netty.noUnsafe=true -Dio.netty.noKeySetOptimization=true -Dio.netty.recycler.maxCapacityPerThread=0 -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/sidecar9230242832198906672 -Djava.security.manager=allow -Djava.security.policy=jar:file:/Users/macbookpro/Desktop/sample-liferay-workspace/bundles/osgi/state/org.eclipse.osgi/276/0/bundleFile!/META-INF/sidecar.policy -Djna.nosys=true]-][Sidecar:625] Restarting sidecar Elasticsearch process
+2024-08-02 02:12:27.728 WARN  [com.liferay.portal.search.elasticsearch7.internal.sidecar.SidecarMainProcessCallable@60cb8827[-Xms1g -Xmx1g -XX:+AlwaysPreTouch -Des.path.conf=/Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/sidecar9230242832198906672/config -Des.networkaddress.cache.ttl=60 -Des.networkaddress.cache.negative.ttl=10 -Dlog4j.shutdownHookEnabled=false -Dlog4j2.disable.jmx=true -Dio.netty.allocator.type=unpooled -Dio.netty.allocator.numDirectArenas=0 -Dio.netty.noUnsafe=true -Dio.netty.noKeySetOptimization=true -Dio.netty.recycler.maxCapacityPerThread=0 -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/sidecar9230242832198906672 -Djava.security.manager=allow -Djava.security.policy=jar:file:/Users/macbookpro/Desktop/sample-liferay-workspace/bundles/osgi/state/org.eclipse.osgi/276/0/bundleFile!/META-INF/sidecar.policy -Djna.nosys=true]-][SidecarManager:72] Liferay automatically starts a child process of Elasticsearch named sidecar for convenient development and demonstration purposes. Do NOT use sidecar in production. Refer to the documentation for details on the limitations of sidecar and instructions on configuring a remote Elasticsearch connection in the Control Panel.
+2024-08-02 02:12:27.728 INFO  [com.liferay.portal.search.elasticsearch7.internal.sidecar.SidecarMainProcessCallable@60cb8827[-Xms1g -Xmx1g -XX:+AlwaysPreTouch -Des.path.conf=/Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/sidecar9230242832198906672/config -Des.networkaddress.cache.ttl=60 -Des.networkaddress.cache.negative.ttl=10 -Dlog4j.shutdownHookEnabled=false -Dlog4j2.disable.jmx=true -Dio.netty.allocator.type=unpooled -Dio.netty.allocator.numDirectArenas=0 -Dio.netty.noUnsafe=true -Dio.netty.noKeySetOptimization=true -Dio.netty.recycler.maxCapacityPerThread=0 -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/sidecar9230242832198906672 -Djava.security.manager=allow -Djava.security.policy=jar:file:/Users/macbookpro/Desktop/sample-liferay-workspace/bundles/osgi/state/org.eclipse.osgi/276/0/bundleFile!/META-INF/sidecar.policy -Djna.nosys=true]-][Sidecar:116] Stopping sidecar Elasticsearch
+2024-08-02 02:12:27.984 INFO  [main][ModuleFrameworkImpl:1771] Started web bundles
+2024-08-02 02:12:27.985 INFO  [main][ModuleFrameworkImpl:283] Navigate to Control Panel > System > Gogo Shell and enter "lb" to see all bundles
+2024-08-02 02:12:28.864 INFO  [main][StartupHelperUtil:97] There are no patches installed
+2024-08-02 02:12:28.966 INFO  [main][LoggingTimer:74] Starting com.liferay.portal.events.StartupHelperUtil#initResourceActions
+2024-08-02 02:12:28.984 INFO  [main][LoggingTimer:35] Completed com.liferay.portal.events.StartupHelperUtil#initResourceActions in 18 ms
+2024-08-02 02:12:29.381 INFO  [main][AutoDeployDir:152] Auto deploy scanner started for /Users/macbookpro/Desktop/sample-liferay-workspace/bundles/deploy
+2024-08-02 02:12:35.201 INFO  [SystemExecutorServiceUtil-1][Sidecar:103] Sidecar Elasticsearch liferay started at 127.0.0.1:9201
+2024-08-02 02:12:38.261 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/20240802021238192SNAJSJMI/admin-theme.war
+2024-08-02 02:12:40.389 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/20240802021238192SNAJSJMI/admin-theme.war copied successfully
+2024-08-02 02:12:41.847 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/20240802021241835JGVBAGNN/classic-theme.war
+2024-08-02 02:12:42.830 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/20240802021241835JGVBAGNN/classic-theme.war copied successfully
+2024-08-02 02:12:44.206 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/20240802021244152TKLNIHYQ/dialect-theme.war
+2024-08-02 02:12:45.317 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/20240802021244152TKLNIHYQ/dialect-theme.war copied successfully
+2024-08-02 02:12:46.734 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/20240802021246717XXOVCBXT/minium-theme.war
+2024-08-02 02:12:47.813 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/20240802021246717XXOVCBXT/minium-theme.war copied successfully
+2024-08-02 02:12:49.118 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/20240802021249054FQZEOXLG/speedwell-theme.war
+2024-08-02 02:12:50.163 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/20240802021249054FQZEOXLG/speedwell-theme.war copied successfully
+2024-08-02 02:17:56.777 INFO  [main][PortalContextLoaderListener:114] JVM arguments: --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.http=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=jdk.zipfs/jdk.nio.zipfs=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Djava.util.logging.config.file=/Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dfile.encoding=UTF-8 -Djava.locale.providers=JRE,COMPAT,CLDR -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT -Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7 -Dignore.endorsed.dirs= -Dcatalina.base=/Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat -Dcatalina.home=/Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat -Djava.io.tmpdir=/Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp
+2024-08-02 02:17:57.787 WARN  [SystemExecutorServiceUtil-1][DialectDetector:73] Liferay is configured to use Hypersonic as its database. Do NOT use Hypersonic in production. Hypersonic is an embedded database useful for development and demonstration purposes. The database settings can be changed in portal-ext.properties.
+2024-08-02 02:17:57.788 INFO  [SystemExecutorServiceUtil-1][DialectDetector:144] Using dialect com.liferay.portal.dao.orm.hibernate.HSQLDialect for HSQL Database Engine 2.7
+2024-08-02 02:17:57.829 INFO  [main][ModuleFrameworkImpl:1352] Starting initial bundles
+2024-08-02 02:17:57.941 INFO  [SystemExecutorServiceUtil-6][InterpolationConfigurationPlugin:109] Configured directory for secrets: /Users/macbookpro/Desktop/sample-liferay-workspace/bundles/osgi/configs
+2024-08-02 02:17:58.081 INFO  [main][ModuleFrameworkImpl:1642] Started initial bundles
+2024-08-02 02:17:58.081 INFO  [main][ModuleFrameworkImpl:1687] Starting dynamic bundles
+2024-08-02 02:17:58.660 WARN  [Start Level: Equinox Container: ae77bba7-0b1a-4edd-ba9d-9e4762d592b3][SidecarManager:72] Liferay automatically starts a child process of Elasticsearch named sidecar for convenient development and demonstration purposes. Do NOT use sidecar in production. Refer to the documentation for details on the limitations of sidecar and instructions on configuring a remote Elasticsearch connection in the Control Panel.
+2024-08-02 02:18:00.949 INFO  [main][ModuleFrameworkImpl:1710] Started dynamic bundles
+2024-08-02 02:18:00.949 INFO  [main][ModuleFrameworkImpl:1717] Starting web bundles
+2024-08-02 02:18:01.797 INFO  [main][ModuleFrameworkImpl:1771] Started web bundles
+2024-08-02 02:18:01.797 INFO  [main][ModuleFrameworkImpl:283] Navigate to Control Panel > System > Gogo Shell and enter "lb" to see all bundles
+2024-08-02 02:18:02.276 INFO  [main][StartupHelperUtil:97] There are no patches installed
+2024-08-02 02:18:02.342 INFO  [main][LoggingTimer:74] Starting com.liferay.portal.events.StartupHelperUtil#initResourceActions
+2024-08-02 02:18:02.361 INFO  [main][LoggingTimer:35] Completed com.liferay.portal.events.StartupHelperUtil#initResourceActions in 19 ms
+2024-08-02 02:18:02.660 INFO  [main][AutoDeployDir:152] Auto deploy scanner started for /Users/macbookpro/Desktop/sample-liferay-workspace/bundles/deploy
+2024-08-02 02:18:04.879 INFO  [SystemExecutorServiceUtil-4][Sidecar:103] Sidecar Elasticsearch liferay started at 127.0.0.1:9201
+2024-08-02 02:18:06.925 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/20240802021806872IZJDCSEP/admin-theme.war
+2024-08-02 02:18:10.169 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/20240802021806872IZJDCSEP/admin-theme.war copied successfully
+2024-08-02 02:18:13.226 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/20240802021813208INVPOPIE/classic-theme.war
+2024-08-02 02:18:14.729 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/20240802021813208INVPOPIE/classic-theme.war copied successfully
+2024-08-02 02:18:17.157 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/20240802021817121GOKUAOGV/dialect-theme.war
+2024-08-02 02:18:19.041 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/20240802021817121GOKUAOGV/dialect-theme.war copied successfully
+2024-08-02 02:18:21.574 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/20240802021821543GRLBLTNZ/minium-theme.war
+2024-08-02 02:18:23.178 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/20240802021821543GRLBLTNZ/minium-theme.war copied successfully
+2024-08-02 02:18:26.162 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/20240802021826140EFEEDPGV/speedwell-theme.war
+2024-08-02 02:18:27.517 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/20240802021826140EFEEDPGV/speedwell-theme.war copied successfully
+2024-08-02 02:22:51.142 WARN  [liferay/mail-2][MailMessageListener:116] Email test@domain.invalid will be ignored because it is included in mail.send.blacklist
+2024-08-02 02:22:51.147 WARN  [liferay/mail-2][MailMessageListener:42] Skipping email because the sender is not specified
+2024-08-02 02:23:04.163 WARN  [http-nio-8080-exec-4][SecurityPortletContainerWrapper:395] User 20122 is not allowed to access URL http://localhost:8080/home and portlet com_liferay_login_web_portlet_LoginPortlet: User 20122 did not provide a valid CSRF token for com.liferay.portlet.SecurityPortletContainerWrapper
+2024-08-02 02:23:11.387 INFO  [http-nio-8080-exec-8][RetryExec:97] I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://s3.amazonaws.com:443: The target server failed to respond
+2024-08-02 02:23:11.388 INFO  [http-nio-8080-exec-8][RetryExec:113] Retrying request to {s}->https://s3.amazonaws.com:443
