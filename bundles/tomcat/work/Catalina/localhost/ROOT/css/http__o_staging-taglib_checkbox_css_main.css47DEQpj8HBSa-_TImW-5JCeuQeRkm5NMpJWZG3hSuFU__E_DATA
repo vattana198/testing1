@@ -1,0 +1,3 @@
+.staging-taglib-checkbox-description{font-weight:normal}.staging-taglib-checkbox-items,.staging-taglib-checkbox-deletions{color:#6b6c7e;font-style:italic}.staging-taglib-checkbox-items:after,.staging-taglib-checkbox-deletions:after{content:")"}.staging-taglib-checkbox-items:before,.staging-taglib-checkbox-deletions:before{content:"("}.staging-taglib-checkbox-suggestion{font-weight:normal}.staging-taglib-checkbox-warning{font-weight:normal}
+
+/*# sourceMappingURL=main.css.map */

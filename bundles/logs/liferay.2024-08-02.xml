@@ -377,3 +377,68 @@ Caused by: java.net.BindException: Address already in use
 <log4j:locationInfo class="org.apache.http.impl.execchain.RetryExec" method="execute" file="RetryExec.java" line="113"/>
 </log4j:event>
 
+<log4j:event logger="com.zaxxer.hikari.pool.HikariPool" timestamp="1722566885817" level="WARN" thread="HikariPool-1 housekeeper">
+<log4j:message><![CDATA[HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m7s801ms).]]></log4j:message>
+<log4j:locationInfo class="com.zaxxer.hikari.pool.HikariPool$HouseKeeper" method="run" file="HikariPool.java" line="788"/>
+</log4j:event>
+
+<log4j:event logger="portal_web.docroot.errors.code_jsp" timestamp="1722568254489" level="WARN" thread="http-nio-8080-exec-9">
+<log4j:message><![CDATA[{code="404", msg="The requested resource [/scripts.js] is not available", uri=/scripts.js}]]></log4j:message>
+<log4j:locationInfo class="org.apache.jsp.errors.code_jsp" method="_jspService" file="code_jsp.java" line="161"/>
+</log4j:event>
+
+<log4j:event logger="portal_web.docroot.errors.code_jsp" timestamp="1722568261208" level="WARN" thread="http-nio-8080-exec-3">
+<log4j:message><![CDATA[{code="404", msg="The requested resource [/scripts.js] is not available", uri=/scripts.js}]]></log4j:message>
+<log4j:locationInfo class="org.apache.jsp.errors.code_jsp" method="_jspService" file="code_jsp.java" line="161"/>
+</log4j:event>
+
+<log4j:event logger="portal_web.docroot.errors.code_jsp" timestamp="1722568280019" level="WARN" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[{code="404", msg="The requested resource [/scripts.js] is not available", uri=/scripts.js}]]></log4j:message>
+<log4j:locationInfo class="org.apache.jsp.errors.code_jsp" method="_jspService" file="code_jsp.java" line="161"/>
+</log4j:event>
+
+<log4j:event logger="com.zaxxer.hikari.pool.HikariPool" timestamp="1722568998301" level="WARN" thread="HikariPool-1 housekeeper">
+<log4j:message><![CDATA[HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m42s216ms).]]></log4j:message>
+<log4j:locationInfo class="com.zaxxer.hikari.pool.HikariPool$HouseKeeper" method="run" file="HikariPool.java" line="788"/>
+</log4j:event>
+
+<log4j:event logger="com.zaxxer.hikari.pool.HikariPool" timestamp="1722569744346" level="WARN" thread="HikariPool-1 housekeeper">
+<log4j:message><![CDATA[HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m55s956ms).]]></log4j:message>
+<log4j:locationInfo class="com.zaxxer.hikari.pool.HikariPool$HouseKeeper" method="run" file="HikariPool.java" line="788"/>
+</log4j:event>
+
+<log4j:event logger="com.zaxxer.hikari.pool.HikariPool" timestamp="1722570429341" level="WARN" thread="HikariPool-1 housekeeper">
+<log4j:message><![CDATA[HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m24s913ms).]]></log4j:message>
+<log4j:locationInfo class="com.zaxxer.hikari.pool.HikariPool$HouseKeeper" method="run" file="HikariPool.java" line="788"/>
+</log4j:event>
+
+<log4j:event logger="portal_web.docroot.errors.code_jsp" timestamp="1722570461727" level="WARN" thread="http-nio-8080-exec-3">
+<log4j:message><![CDATA[{code="404", msg="The requested resource [/scripts.js] is not available", uri=/scripts.js}]]></log4j:message>
+<log4j:locationInfo class="org.apache.jsp.errors.code_jsp" method="_jspService" file="code_jsp.java" line="161"/>
+</log4j:event>
+
+<log4j:event logger="portal_web.docroot.errors.code_jsp" timestamp="1722570769874" level="WARN" thread="http-nio-8080-exec-9">
+<log4j:message><![CDATA[{code="404", msg="The requested resource [/scripts.js] is not available", uri=/scripts.js}]]></log4j:message>
+<log4j:locationInfo class="org.apache.jsp.errors.code_jsp" method="_jspService" file="code_jsp.java" line="161"/>
+</log4j:event>
+
+<log4j:event logger="com.zaxxer.hikari.pool.HikariPool" timestamp="1722571691230" level="WARN" thread="HikariPool-1 housekeeper">
+<log4j:message><![CDATA[HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m1s715ms).]]></log4j:message>
+<log4j:locationInfo class="com.zaxxer.hikari.pool.HikariPool$HouseKeeper" method="run" file="HikariPool.java" line="788"/>
+</log4j:event>
+
+<log4j:event logger="portal_web.docroot.errors.code_jsp" timestamp="1722571722401" level="WARN" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[{code="404", msg="The requested resource [/scripts.js] is not available", uri=/scripts.js}]]></log4j:message>
+<log4j:locationInfo class="org.apache.jsp.errors.code_jsp" method="_jspService" file="code_jsp.java" line="161"/>
+</log4j:event>
+
+<log4j:event logger="portal_web.docroot.errors.code_jsp" timestamp="1722571789013" level="WARN" thread="http-nio-8080-exec-7">
+<log4j:message><![CDATA[{code="404", msg="The requested resource [/scripts.js] is not available", uri=/scripts.js}]]></log4j:message>
+<log4j:locationInfo class="org.apache.jsp.errors.code_jsp" method="_jspService" file="code_jsp.java" line="161"/>
+</log4j:event>
+
+<log4j:event logger="portal_web.docroot.errors.code_jsp" timestamp="1722572013711" level="WARN" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[{code="404", msg="The requested resource [/scripts.js] is not available", uri=/scripts.js}]]></log4j:message>
+<log4j:locationInfo class="org.apache.jsp.errors.code_jsp" method="_jspService" file="code_jsp.java" line="161"/>
+</log4j:event>
+

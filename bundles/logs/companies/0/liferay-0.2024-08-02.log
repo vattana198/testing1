@@ -139,3 +139,16 @@ Caused by: java.net.BindException: Address already in use
 2024-08-02 02:18:23.178 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/20240802021821543GRLBLTNZ/minium-theme.war copied successfully
 2024-08-02 02:18:26.162 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/20240802021826140EFEEDPGV/speedwell-theme.war
 2024-08-02 02:18:27.517 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /Users/macbookpro/Desktop/sample-liferay-workspace/bundles/tomcat/temp/20240802021826140EFEEDPGV/speedwell-theme.war copied successfully
+2024-08-02 02:48:05.817 WARN  [HikariPool-1 housekeeper][HikariPool:788] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m7s801ms).
+2024-08-02 03:10:54.489 WARN  [http-nio-8080-exec-9][code_jsp:161] {code="404", msg="The requested resource [/scripts.js] is not available", uri=/scripts.js}
+2024-08-02 03:11:01.208 WARN  [http-nio-8080-exec-3][code_jsp:161] {code="404", msg="The requested resource [/scripts.js] is not available", uri=/scripts.js}
+2024-08-02 03:11:20.019 WARN  [http-nio-8080-exec-1][code_jsp:161] {code="404", msg="The requested resource [/scripts.js] is not available", uri=/scripts.js}
+2024-08-02 03:23:18.301 WARN  [HikariPool-1 housekeeper][HikariPool:788] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m42s216ms).
+2024-08-02 03:35:44.346 WARN  [HikariPool-1 housekeeper][HikariPool:788] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m55s956ms).
+2024-08-02 03:47:09.341 WARN  [HikariPool-1 housekeeper][HikariPool:788] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m24s913ms).
+2024-08-02 03:47:41.727 WARN  [http-nio-8080-exec-3][code_jsp:161] {code="404", msg="The requested resource [/scripts.js] is not available", uri=/scripts.js}
+2024-08-02 03:52:49.874 WARN  [http-nio-8080-exec-9][code_jsp:161] {code="404", msg="The requested resource [/scripts.js] is not available", uri=/scripts.js}
+2024-08-02 04:08:11.230 WARN  [HikariPool-1 housekeeper][HikariPool:788] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m1s715ms).
+2024-08-02 04:08:42.401 WARN  [http-nio-8080-exec-1][code_jsp:161] {code="404", msg="The requested resource [/scripts.js] is not available", uri=/scripts.js}
+2024-08-02 04:09:49.013 WARN  [http-nio-8080-exec-7][code_jsp:161] {code="404", msg="The requested resource [/scripts.js] is not available", uri=/scripts.js}
+2024-08-02 04:13:33.711 WARN  [http-nio-8080-exec-1][code_jsp:161] {code="404", msg="The requested resource [/scripts.js] is not available", uri=/scripts.js}

@@ -1,0 +1,3 @@
+.staging-taglib-popover .staging-taglib-popover-icon-holder:hover+.popover{visibility:visible}.staging-taglib-popover .staging-taglib-popover-icon-holder+.popover{visibility:hidden}.staging-taglib-popover .staging-taglib-popover-icon-holder+.popover:hover{visibility:visible}
+
+/*# sourceMappingURL=main.css.map */
